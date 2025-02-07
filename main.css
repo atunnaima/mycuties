@@ -1,0 +1,123 @@
+/* for surprise */
+/* declare font*/
+@font-face { font-family: Minecraft; src: url('MinecraftRegular-Bmg3.otf'); } 
+@font-face { font-family: Minecraft; font-weight: bold; src: url('MinecraftBold-nMK1.otf');}
+
+html{
+    background-color: #F4F8D3;
+}
+.bear img{
+    justify-content: center;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for zoom */
+}
+
+.bear img:hover{
+    transform: scale(1.1);
+}
+body{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+   gap: 3px;
+}
+
+p{
+    font-family: Minecraft;
+    color: #f6a0b1;
+}
+.popOut { /* for mobile everything in the mid*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.textBox{
+    height: 170px;
+    width: 90%;
+    background-color: #f7dd7f;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-align: center;
+    max-width: 700px;
+
+}
+
+.buttonGrp{
+    display: flex;
+    gap: 30px ;
+    justify-content: center;
+    
+    
+    
+}
+.b1{
+    font-family: Minecraft;
+    font-size: larger;
+    color: #ffffff;
+    background-color: #afe01f ;
+    border: none;
+    padding: 20px 37px ;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 150px ;
+    width: 40%;
+    transition: transform 0.3s ease-in-out;
+
+  
+    
+}
+
+.b2 {
+    font-family: Minecraft; 
+    font-size: larger;
+    color: #FFF5E1;
+    background-color: #DE3163 ;
+    border: none;
+    padding: 20px 43px ;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    text-align: center;
+    max-width: 150px ;
+    width: 40%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.b1:hover{
+    transform: scale(1.1);
+}
+
+.b2:hover{
+    transform: scale(1.1);
+}
+
+.popOut{
+    display: none;
+    opacity: 0;/*for fade out animation*/
+    transform: translateY(-50px); /* Start slightly above */
+    transition: opacity 0.7s ease, transform 0.5s ease;
+}
+
+.main_con { /*slide down animation*/
+    transition: transform 0.5s ease;
+}
+
+.main_con.slideOut {
+    transform: translateY(-30px);  /* Slide out*/
+}
+
+
